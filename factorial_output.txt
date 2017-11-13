@@ -1,0 +1,57 @@
+microbenchmark tests for various factorial finding functions
+$`1`
+Unit: microseconds
+                expr     min       lq      mean   median       uq     max neval cld
+   factorial_loop(.)   9.032  10.4695  14.37796  13.7540  16.0120  45.161   100  b 
+ factorial_reduce(.) 130.144 149.0295 166.60896 162.7825 173.0465 339.113   100   c
+   factorial_func(.)   2.463   2.8750   3.69546   3.2850   3.6960  22.991   100 a  
+    factorial_mem(.)   4.106   4.9270   5.86730   5.3380   6.5690  14.370   100 a  
+
+$`5`
+Unit: microseconds
+                expr     min       lq      mean   median       uq     max neval cld
+   factorial_loop(.)   9.853  11.0850  13.79082  13.7540  15.1910  43.108   100  b 
+ factorial_reduce(.) 131.786 135.8920 146.20064 137.9445 151.6975 317.354   100   c
+   factorial_func(.)   5.748   6.7745   7.39041   7.3900   7.8010  11.086   100 a  
+    factorial_mem(.)   3.696   4.5170   5.57995   5.3370   5.7480  21.349   100 a  
+
+$`10`
+Unit: microseconds
+                expr     min       lq      mean  median      uq     max neval cld
+   factorial_loop(.)  11.496  13.1380  15.99544  14.780  17.654  33.255   100  b 
+ factorial_reduce(.) 137.534 142.4605 152.66677 145.129 158.883 331.312   100   c
+   factorial_func(.)  10.675  11.9060  12.71516  12.317  13.138  26.276   100  b 
+    factorial_mem(.)   3.696   4.1060   5.06260   4.927   5.338   9.854   100 a  
+
+$`20`
+Unit: microseconds
+                expr     min       lq      mean   median       uq     max neval cld
+   factorial_loop(.)  15.191  17.6540  22.24813  22.1700  23.4020 109.616   100  b 
+ factorial_reduce(.) 235.244 242.0185 258.26783 250.6400 264.8045 547.671   100   c
+   factorial_func(.)  19.707  21.9650  23.13078  22.5810  23.8125  40.234   100  b 
+    factorial_mem(.)   3.695   4.5160   5.72350   5.3375   6.1590  17.654   100 a  
+
+$`30`
+Unit: microseconds
+                expr     min       lq      mean   median       uq      max neval cld
+   factorial_loop(.)  18.886  25.4545  39.61844  32.8440  47.8295  126.038   100  a 
+ factorial_reduce(.) 252.488 285.7415 497.12452 349.1715 622.8015 2111.036   100   b
+   factorial_func(.)  28.739  33.4600  45.02119  37.5655  58.2985   77.594   100  a 
+    factorial_mem(.)   4.106   6.1585  11.24141   8.6220  12.7270  110.438   100  a 
+
+$`50`
+Unit: microseconds
+                expr     min       lq      mean  median       uq     max neval  cld
+   factorial_loop(.)  25.865  28.7390  34.07188  33.665  35.5130  65.689   100  b  
+ factorial_reduce(.) 277.120 292.3100 312.09475 306.064 314.6855 527.143   100    d
+   factorial_func(.)  49.266  52.5505  57.36634  54.809  58.7090 112.901   100   c 
+    factorial_mem(.)   3.695   4.7220   6.25325   5.748   6.5690  19.297   100 a   
+
+$`100`
+Unit: microseconds
+                expr     min      lq      mean   median       uq     max neval  cld
+   factorial_loop(.)  43.519  47.624  55.40395  53.9875  59.7350  80.057   100  b  
+ factorial_reduce(.) 343.218 365.388 385.43916 376.4730 398.2320 614.180   100    d
+   factorial_func(.)  99.764 103.048 113.77985 105.3060 120.2915 182.284   100   c 
+    factorial_mem(.)   4.106   4.927   6.81565   5.7480   7.1850  24.633   100 a   
+
