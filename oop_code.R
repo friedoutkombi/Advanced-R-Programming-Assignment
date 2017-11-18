@@ -85,7 +85,7 @@ summary.Subject<-function(instance) {
                  output = output), class = "Summary")
 }
 
-# method takes subject instance and visit number, returns visit instance.
+# Method takes subject instance and visit number, returns visit instance.
 Visit.Subject <- function(subject, visitnum) {
   data <- subject$data %>% 
     filter(visit == visitnum) %>% 
@@ -142,5 +142,3 @@ print.Summary <- function(x) {
 
 
 #--------------------------END OF PROGRAM------------------------#
-#--------------------------METHODS: ROOM-------------------------#
-#
