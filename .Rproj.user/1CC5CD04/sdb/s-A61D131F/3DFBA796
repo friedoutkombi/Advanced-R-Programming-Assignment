@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "## Read in the data\nlibrary(readr)\nlibrary(magrittr)\nsource(\"oop_code.R\")\n## Load any other packages that you may need to execute your code\n\ndata <- read_csv(\"data/MIE.csv\")\nx <- make_LD(data)\nprint(class(x))\nprint(x)\n\n## Subject 10 doesn't exist\nout <- subject(x, 10)\nprint(out)\n\nout <- subject(x, 14)\nprint(out)\n\nout <- subject(x, 54) %>% summary\nprint(out)\n\nout <- subject(x, 14) %>% summary\nprint(out)\n\nout <- subject(x, 44) %>% visit(0) %>% room(\"bedroom\")\nprint(out)\n\n## Show a summary of the pollutant values\nout <- subject(x, 44) %>% visit(0) %>% room(\"bedroom\") %>% summary\nprint(out)\n\nout <- subject(x, 44) %>% visit(1) %>% room(\"living room\") %>% summary\nprint(out)",
+    "created" : 1511024482783.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "517470389",
+    "id" : "3DFBA796",
+    "lastKnownWriteTime" : 1511024525,
+    "last_content_update" : 1511024525852,
+    "path" : "C:/Users/Nicholas/Desktop/Online Courses/Coursera Mastering Software Development in R Specialization/Advanced R Programming/Advanced-R-Programming-Assignment/oop_output.R",
+    "project_path" : "oop_output.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
